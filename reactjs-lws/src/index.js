@@ -1,12 +1,11 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import ReactDOM from 'react-dom';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-    <React.StrictMode>
-        <App />
-    </React.StrictMode>
-);
-reportWebVitals();
+setInterval(() => {
+    const element = (
+        <h1 className="heading">
+            <span className="text">hello {new Date().toLocaleString()}</span>
+        </h1>
+    );
+    ReactDOM.render(element, document.getElementById('root'));
+});
